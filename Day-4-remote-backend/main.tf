@@ -4,5 +4,10 @@ resource "aws_vpc" "name" {
 
 resource "aws_subnet" "name" {
     vpc_id     = aws_vpc.name.id
-  cidr_block = "10.0.0.0/24"
+  cidr_block = "10.0.0.0/26"
+}
+
+resource "aws_subnet" "name1" {
+    vpc_id     = aws_vpc.name.id
+  cidr_block = "10.0.0.64/26"
 }
